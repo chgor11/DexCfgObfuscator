@@ -9,7 +9,7 @@ pluginManagement {
         includeBuild('../..')
     } else {
         plugins {
-            id 'io.github.w296488320.dexcfgobf' version publishedPluginVersion
+            id 'io.github.chgor11.dexcfgobf' version publishedPluginVersion
         }
     }
 
