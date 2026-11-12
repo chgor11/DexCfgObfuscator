@@ -96,7 +96,7 @@ pluginManagement {
     repositories {
         maven {
             name = 'DexCfgObfuscatorGitHubPages'
-            url = uri('https://w296488320.github.io/DexCfgObfuscator/maven-repo')
+            url = uri('https://chgor11.github.io/DexCfgObfuscator/maven-repo')
             content {
                 includeGroupByRegex 'io\\.github\\.w296488320(\\..*)?'
             }
