@@ -98,10 +98,10 @@ if is_true "${DEXCFG_OFFLINE:-false}"; then
     echo "已启用显式离线模式（DEXCFG_OFFLINE=true）。"
 fi
 publication_properties=(
-    "-PPOM_GROUP_ID=io.github.w296488320"
+    "-PPOM_GROUP_ID=io.github.chgor11"
     "-PPOM_ARTIFACT_ID=dex-cfg-obfuscator"
     "-PPOM_VERSION=$version"
-    "-PPOM_PLUGIN_ID=io.github.w296488320.dexcfgobf"
+    "-PPOM_PLUGIN_ID=io.github.chgor11.dexcfgobf"
     "-PcentralPublishing=false"
 )
 
