@@ -287,7 +287,7 @@ jobs:
             "$marker_sha256" "$RUNNER_TEMP/marker.pom" \
             | sha256sum --check --strict -
 
-          grep -Fq '<groupId>io.github.w296488320</groupId>' \
+          grep -Fq '<groupId>io.github.chgor11</groupId>' \
             "$RUNNER_TEMP/implementation.pom"
           grep -Fq "<version>$RELEASE_VERSION</version>" \
             "$RUNNER_TEMP/implementation.pom"
@@ -301,7 +301,7 @@ jobs:
             "$RUNNER_TEMP/implementation.module"
           jar tf "$RUNNER_TEMP/implementation.jar" \
             | grep -Fxq \
-              'META-INF/gradle-plugins/io.github.w296488320.dexcfgobf.properties'
+              'META-INF/gradle-plugins/io.github.chgor11.dexcfgobf.properties'
           echo "repository_url=$repository_url" >> "$GITHUB_OUTPUT"
 
       - name: Build Android string-protection sample from public repository
