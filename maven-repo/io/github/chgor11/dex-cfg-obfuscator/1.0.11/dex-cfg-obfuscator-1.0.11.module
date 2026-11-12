@@ -1,0 +1,123 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.chgor11",
+    "module": "dex-cfg-obfuscator",
+    "version": "1.0.11",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "dex-cfg-obfuscator-1.0.11.jar",
+          "url": "dex-cfg-obfuscator-1.0.11.jar",
+          "size": 688622,
+          "sha512": "5fdca32bc253337c24289d77d79d72d6e32b4debcc37b1a3de7499118065788d767836c2843cdb6f829ffccbda7dbbc65fc1af517583311bfcc8292fc8dc5141",
+          "sha256": "999bde2667cb8cbc7dd3be34f50f602bcddf1afd23fefef76a52b390d16746de",
+          "sha1": "c8cdfd62fe829f1734fbe24e3935df6789254b97",
+          "md5": "fc7094aa61293368a22fb3514222c1ef"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.smali",
+          "module": "smali-dexlib2",
+          "version": {
+            "requires": "3.0.9"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-tree",
+          "version": {
+            "requires": "9.9"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.9"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "dex-cfg-obfuscator-1.0.11.jar",
+          "url": "dex-cfg-obfuscator-1.0.11.jar",
+          "size": 688622,
+          "sha512": "5fdca32bc253337c24289d77d79d72d6e32b4debcc37b1a3de7499118065788d767836c2843cdb6f829ffccbda7dbbc65fc1af517583311bfcc8292fc8dc5141",
+          "sha256": "999bde2667cb8cbc7dd3be34f50f602bcddf1afd23fefef76a52b390d16746de",
+          "sha1": "c8cdfd62fe829f1734fbe24e3935df6789254b97",
+          "md5": "fc7094aa61293368a22fb3514222c1ef"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "dex-cfg-obfuscator-1.0.11-sources.jar",
+          "url": "dex-cfg-obfuscator-1.0.11-sources.jar",
+          "size": 207564,
+          "sha512": "b2aaf772dff1357858dc4876340570d04b43cd0da35bf010d139ff0ff3bc66ae1b09fd3db5ff85a610dc77880d9e2b9540ccde2e90d11bcd6d74067445444506",
+          "sha256": "cdb57a08695fe2e18fb66e7be048e4aea13ff8a65563f850bf64c87000ed1d43",
+          "sha1": "6cf62287374436014f8f260b08a02999f875a2da",
+          "md5": "88c4505aa830f3522b81cd4ba0477767"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "dex-cfg-obfuscator-1.0.11-javadoc.jar",
+          "url": "dex-cfg-obfuscator-1.0.11-javadoc.jar",
+          "size": 258161,
+          "sha512": "0a27f1357c7f95678f7b47388b58db24a6ca2da54c1beea7f52458c278cb07405a52b1b004bb3928326b0aab2b332cdccb86a3f6c89e556465b45680bb320147",
+          "sha256": "4fa362b4f3f41d67fc48ce247fcec140c7709031bc30528f93ee29404241d4e8",
+          "sha1": "b708d7d7288f648e24460e441420f803fa131bb8",
+          "md5": "fdb002067443de2bd26c2657242c7660"
+        }
+      ]
+    }
+  ]
+}
