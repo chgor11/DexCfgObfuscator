@@ -241,7 +241,7 @@ jobs:
         shell: bash
         run: |
           repository_url="${PAGE_URL%/}/maven-repo"
-          implementation_path="io/github/w296488320/dex-cfg-obfuscator/$RELEASE_VERSION"
+          implementation_path="io/github/chgor11/dex-cfg-obfuscator/$RELEASE_VERSION"
           marker_artifact='io.github.chgor11.dexcfgobf.gradle.plugin'
           marker_path="io/github/chgor11/dexcfgobf/$marker_artifact/$RELEASE_VERSION"
 
