@@ -28,6 +28,7 @@ import org.gradle.api.Task
 import org.gradle.api.flow.FlowProviders
 import org.gradle.api.flow.FlowScope
 import org.gradle.api.tasks.TaskProvider
+import org.gradle.api.configuration.BuildFeatures
 import javax.inject.Inject
 
 /**
@@ -1061,6 +1062,11 @@ class DexCfgObfuscatorPlugin implements Plugin<Project> {
                         .configureEach { it.dependsOn obfTask }
             }
         }
+    }
+
+    private static boolean isConfigurationCacheRequested(Project project) {
+        BuildFeatures buildFeatures = project.gradle.services.get(BuildFeatures.class)
+        return buildFeatures.configurationCache.requested.getOrElse(false)
     }
 
     /** CFG 关闭时仍在最终 application DEX 上执行字符串明文门禁并产出报告。 */
@@ -2445,7 +2451,7 @@ class DexCfgObfuscatorPlugin implements Plugin<Project> {
                                                      boolean cfgEnabled,
                                                      boolean includeDependencies,
                                                      boolean forceFullCoverage) {
-        if (project.gradle.startParameter.buildFeatures.configurationCache.requested.getOrElse(Boolean.FALSE)) {
+        if (isConfigurationCacheRequested(project)) {
             throw new GradleException('[dex-cfg-obf] stringEncryption does not yet support Gradle ' +
                     'configuration cache because custom cipher/key objects are build-process state; ' +
                     'rerun with --no-configuration-cache')
