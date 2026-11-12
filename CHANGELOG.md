@@ -52,8 +52,8 @@ All notable user-visible changes are documented in this file. The project follow
 
 ### Changed
 
-- Public coordinates are `io.github.w296488320:dex-cfg-obfuscator:0.1.0` and plugin ID
-  `io.github.w296488320.dexcfgobf`; Java implementation packages remain under `com.hunter.*`.
+- Public coordinates are `io.github.chgor11:dex-cfg-obfuscator:0.1.0` and plugin ID
+  `io.github.chgor11.dexcfgobf`; Java implementation packages remain under `com.hunter.*`.
 - Release bundles are built from an isolated temporary Maven repository and contain only the current implementation and plugin-marker versions.
 - Plugin JARs, documentation JARs, and the outer Maven-repository ZIP are byte-reproducible for an
   exact-tag publication retry.
