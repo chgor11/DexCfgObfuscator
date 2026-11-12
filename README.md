@@ -62,8 +62,8 @@ JSON 报告。
 
 | Item | Value |
 |---|---|
-| Plugin ID | `io.github.w296488320.dexcfgobf` |
-| Implementation group | `io.github.w296488320` |
+| Plugin ID | `io.github.chgor11.dexcfgobf` |
+| Implementation group | `io.github.chgor11` |
 | Current version | `1.0.1` |
 | Java baseline | Java 17 |
 | Development baseline | Gradle 9.6.1, AGP 9.3.1 |
