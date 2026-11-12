@@ -13,13 +13,13 @@ plugins {
 // Maven Central. Java package names intentionally stay under com.hunter: changing Maven coordinates
 // does not require moving implementation classes.
 def pomGroupId = providers.gradleProperty('POM_GROUP_ID')
-        .getOrElse('io.github.w296488320')
+        .getOrElse('io.github.chgor11')
 def pomArtifactId = providers.gradleProperty('POM_ARTIFACT_ID')
         .getOrElse('dex-cfg-obfuscator')
 def pomVersion = providers.gradleProperty('POM_VERSION')
         .getOrElse('1.0.5')
 def publicPluginId = providers.gradleProperty('POM_PLUGIN_ID')
-        .getOrElse('io.github.w296488320.dexcfgobf')
+        .getOrElse('io.github.chgor11.dexcfgobf')
 def projectUrl = 'https://github.com/w296488320/DexCfgObfuscator'
 def projectDescription = 'Gradle plugin providing pre-D8/R8 string protection and ' +
         'post-D8/R8 DEX control-flow obfuscation for Android.'
