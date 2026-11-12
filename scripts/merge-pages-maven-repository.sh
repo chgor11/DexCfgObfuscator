@@ -35,9 +35,9 @@ if find "$pages_worktree" -type l -print -quit | grep -q .; then
     fail "Pages worktree must not contain symbolic links"
 fi
 
-group_id='io.github.w296488320'
+group_id='io.github.chgor11'
 artifact_id='dex-cfg-obfuscator'
-plugin_id='io.github.w296488320.dexcfgobf'
+plugin_id='io.github.chgor11.dexcfgobf'
 marker_artifact_id="${plugin_id}.gradle.plugin"
 
 implementation_relative="io/github/w296488320/dex-cfg-obfuscator/$version"
