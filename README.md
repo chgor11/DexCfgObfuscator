@@ -114,7 +114,7 @@ Root project `build.gradle` / 项目根 `build.gradle`：
 plugins {
     // Keep existing Android/Kotlin declarations and add this line.
     // 保留已有 Android/Kotlin 插件声明，只增加这一行。
-    id 'io.github.chgor11.dexcfgobf' version '1.0.1' apply false
+    id 'io.github.chgor11.dexcfgobf' version '1.0.2' apply false
 }
 ```
 
