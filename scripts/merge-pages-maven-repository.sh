@@ -40,8 +40,8 @@ artifact_id='dex-cfg-obfuscator'
 plugin_id='io.github.chgor11.dexcfgobf'
 marker_artifact_id="${plugin_id}.gradle.plugin"
 
-implementation_relative="io/github/w296488320/dex-cfg-obfuscator/$version"
-marker_relative="io/github/w296488320/dexcfgobf/$marker_artifact_id/$version"
+implementation_relative="io/github/chgor11/dex-cfg-obfuscator/$version"
+marker_relative="io/github/chgor11/dexcfgobf/$marker_artifact_id/$version"
 implementation_source="$staging_repository/$implementation_relative"
 marker_source="$staging_repository/$marker_relative"
 
