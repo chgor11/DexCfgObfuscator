@@ -30,8 +30,8 @@ DexCfgObfuscator 是一个 Android 字符串与 DEX 控制流混淆 Gradle 插�
 
 | 项目 | 值 |
 |---|---|
-| Gradle Plugin ID | `io.github.w296488320.dexcfgobf` |
-| Group | `io.github.w296488320` |
+| Gradle Plugin ID | `io.github.chgor11.dexcfgobf` |
+| Group | `io.github.chgor11` |
 | Version | `0.1.2` |
 | Java | 17 |
 | 当前开发基线 | Gradle 9.6.1、AGP 9.3.1 |
@@ -93,12 +93,12 @@ pluginManagement {
 ```groovy
 plugins {
     // 保留这里已有的 Android/Kotlin 插件声明。
-    id 'io.github.w296488320.dexcfgobf' version '0.1.2' apply false
+    id 'io.github.chgor11.dexcfgobf' version '0.1.2' apply false
 }
 ```
 
 如果不在根项目统一管理插件版本，也可以在模块的 `plugins` 块中直接写
-`id 'io.github.w296488320.dexcfgobf' version '0.1.2'`，两种写法选择一种即可，不要重复声明不同版本。
+`id 'io.github.chgor11.dexcfgobf' version '0.1.2'`，两种写法选择一种即可，不要重复声明不同版本。
 根脚本原来没有 `plugins {}` 时，新建的块应放在已有 `buildscript {}` 之后、其他普通配置块之前。
 
 ### 第 4 步：在 application 模块 `build.gradle` 应用并配置
@@ -112,7 +112,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id 'com.android.application'
-    id 'io.github.w296488320.dexcfgobf'
+    id 'io.github.chgor11.dexcfgobf'
 }
 
 dexControlFlowObfuscator {
@@ -166,7 +166,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id 'com.android.library'
-    id 'io.github.w296488320.dexcfgobf'
+    id 'io.github.chgor11.dexcfgobf'
 }
 
 dexControlFlowObfuscator {
@@ -485,7 +485,7 @@ outputs 执行常量池门禁。最终 DEX 的 CFG 防护和全局明文证明�
 
 ### 4.2 Gradle Plugin Portal 与 Maven Central（标准镜像）
 
-两个渠道都使用 `io.github.w296488320.dexcfgobf`。Plugin Portal 可直接由
+两个渠道都使用 `io.github.chgor11.dexcfgobf`。Plugin Portal 可直接由
 `gradlePluginPortal()` 解析；Central 可由 `mavenCentral()` 解析。首版审核完成前使用 GitHub Pages，
 审核通过后无需修改模块插件声明。普通使用者不需要发布账号、GPG 或发布 Token。
 
@@ -567,7 +567,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id 'com.android.application'
-    id 'io.github.w296488320.dexcfgobf'
+    id 'io.github.chgor11.dexcfgobf'
 }
 
 dexControlFlowObfuscator {
@@ -616,7 +616,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id("com.android.application")
-    id("io.github.w296488320.dexcfgobf")
+    id("io.github.chgor11.dexcfgobf")
 }
 
 dexControlFlowObfuscator {
@@ -656,7 +656,7 @@ dexControlFlowObfuscator {
 
 ### 5.6 Android library
 
-library 模块也可应用 `io.github.w296488320.dexcfgobf`，但只运行 `PROJECT` scope 的前置字符串阶段。仅当要
+library 模块也可应用 `io.github.chgor11.dexcfgobf`，但只运行 `PROJECT` scope 的前置字符串阶段。仅当要
 独立构建或发布受保护 AAR 时才需要这样配置；被 application 消费的普通 module/AAR/JAR 已由 App
 的 `ALL` scope 自动处理。library 不注册后置 DEX CFG，只需配置字符串模块。
 
@@ -665,7 +665,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id 'com.android.library'
-    id 'io.github.w296488320.dexcfgobf'
+    id 'io.github.chgor11.dexcfgobf'
 }
 
 dexControlFlowObfuscator {
@@ -1143,7 +1143,7 @@ canonical plugin ID；从 Plugin Portal/Central 获取时分别检查 `gradlePlu
 
 - Maven 路径是否指向解压后的 `maven-repo/`，而不是 ZIP 或 JAR。
 - `pluginManagement.repositories` 是否位于 `settings.gradle(.kts)`。
-- marker 目录中是否存在 `io.github.w296488320.dexcfgobf.gradle.plugin-<version>.pom`。
+- marker 目录中是否存在 `io.github.chgor11.dexcfgobf.gradle.plugin-<version>.pom`。
 - 插件版本是否与仓库中的版本目录一致。
 
 ### 12.2 release 提示找不到 mapping
