@@ -123,8 +123,8 @@ run_local_gradle \
     "${gradle_flags[@]}" \
     publishAllPublicationsToLocalPluginRepoRepository
 
-implementation_dir="$staging_repo/io/github/w296488320/dex-cfg-obfuscator/$version"
-marker_dir="$staging_repo/io/github/w296488320/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin/$version"
+implementation_dir="$staging_repo/io/github/chgor11/dex-cfg-obfuscator/$version"
+marker_dir="$staging_repo/io/github/chgor11/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin/$version"
 implementation_jar="$implementation_dir/dex-cfg-obfuscator-$version.jar"
 marker_pom="$marker_dir/io.github.chgor11.dexcfgobf.gradle.plugin-$version.pom"
 
@@ -137,13 +137,13 @@ done
 
 echo "[3/4] 生成仅包含当前版本的可分发 ZIP"
 mkdir -p \
-    "$package_root/maven-repo/io/github/w296488320/dex-cfg-obfuscator" \
-    "$package_root/maven-repo/io/github/w296488320/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin" \
+    "$package_root/maven-repo/io/github/chgor11/dex-cfg-obfuscator" \
+    "$package_root/maven-repo/io/github/chgor11/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin" \
     "$package_root/doc"
 cp -R -- "$implementation_dir" \
-    "$package_root/maven-repo/io/github/w296488320/dex-cfg-obfuscator/"
+    "$package_root/maven-repo/io/github/chgor11/dex-cfg-obfuscator/"
 cp -R -- "$marker_dir" \
-    "$package_root/maven-repo/io/github/w296488320/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin/"
+    "$package_root/maven-repo/io/github/chgor11/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin/"
 cp -- "$script_dir/README.md" "$package_root/README.md"
 cp -- "$script_dir/doc/README_CN.md" "$package_root/doc/README_CN.md"
 cp -- "$script_dir/doc/README_EN.md" "$package_root/doc/README_EN.md"
