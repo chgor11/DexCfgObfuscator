@@ -81,7 +81,7 @@ pluginManagement {
     repositories {
         maven {
             name = 'DexCfgObfuscatorGitHubPages'
-            url = uri('https://w296488320.github.io/DexCfgObfuscator/maven-repo')
+            url = uri('https://chgor11.github.io/DexCfgObfuscator/maven-repo')
             content {
                 includeGroupByRegex 'io\\.github\\.w296488320(\\..*)?'
             }
@@ -533,7 +533,7 @@ module remains responsible for final-DEX control-flow protection and global plai
 
 An immutable `v<version>` tag merges the implementation component and Gradle plugin marker into the
 persistent `gh-pages` Maven repository and refuses to overwrite an existing version. Consumers add
-`https://w296488320.github.io/DexCfgObfuscator/maven-repo` to
+`https://chgor11.github.io/DexCfgObfuscator/maven-repo` to
 `pluginManagement.repositories`; no GitHub account or token is required.
 
 ### 4.2 Gradle Plugin Portal and Maven Central (standard mirrors)
@@ -579,7 +579,7 @@ pluginManagement {
     repositories {
         maven {
             name = 'DexCfgObfuscatorGitHubPages'
-            url = uri('https://w296488320.github.io/DexCfgObfuscator/maven-repo')
+            url = uri('https://chgor11.github.io/DexCfgObfuscator/maven-repo')
             content {
                 includeGroupByRegex 'io\\.github\\.w296488320(\\..*)?'
             }
@@ -600,7 +600,7 @@ pluginManagement {
     repositories {
         maven {
             name = "DexCfgObfuscatorGitHubPages"
-            url = uri("https://w296488320.github.io/DexCfgObfuscator/maven-repo")
+            url = uri("https://chgor11.github.io/DexCfgObfuscator/maven-repo")
             content {
                 includeGroupByRegex("io\\.github\\.w296488320(\\..*)?")
             }
