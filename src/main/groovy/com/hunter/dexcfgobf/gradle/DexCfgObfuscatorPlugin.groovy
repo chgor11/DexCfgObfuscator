@@ -2445,7 +2445,7 @@ class DexCfgObfuscatorPlugin implements Plugin<Project> {
                                                      boolean cfgEnabled,
                                                      boolean includeDependencies,
                                                      boolean forceFullCoverage) {
-        if (project.gradle.configurationCache.requested.getOrElse(false)) {
+        if (project.gradle.startParameter.buildFeatures.configurationCache.requested.getOrElse(Boolean.FALSE)) {
             throw new GradleException('[dex-cfg-obf] stringEncryption does not yet support Gradle ' +
                     'configuration cache because custom cipher/key objects are build-process state; ' +
                     'rerun with --no-configuration-cache')
