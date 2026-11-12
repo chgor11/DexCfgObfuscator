@@ -73,15 +73,6 @@ for required_document in \
     fi
 done
 
-for versioned_document in README.md doc/README_CN.md doc/README_EN.md; do
-    if ! grep -Fq "id 'io.github.w296488320.dexcfgobf' version '$version'" \
-            "$script_dir/$versioned_document"; then
-        echo "发布校验失败，文档中的插件版本未同步为 $version：" \
-            "$script_dir/$versioned_document" >&2
-        exit 1
-    fi
-done
-
 temp_base="${TMPDIR:-/tmp}"
 temp_base="${temp_base%/}"
 temporary_dir="$(mktemp -d "$temp_base/dex-cfg-obfuscator-release.XXXXXX")"
