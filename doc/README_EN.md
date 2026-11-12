@@ -38,8 +38,8 @@ Current coordinates:
 
 | Item | Value |
 |---|---|
-| Gradle Plugin ID | `io.github.w296488320.dexcfgobf` |
-| Group | `io.github.w296488320` |
+| Gradle Plugin ID | `io.github.chgor11.dexcfgobf` |
+| Group | `io.github.chgor11` |
 | Version | `0.1.2` |
 | Java | 17 |
 | Current development baseline | Gradle 9.6.1, AGP 9.3.1 |
@@ -104,12 +104,12 @@ Keep the consumer's existing Android plugins and versions, and add only the line
 ```groovy
 plugins {
     // Keep the existing Android/Kotlin plugin declarations here.
-    id 'io.github.w296488320.dexcfgobf' version '0.1.2' apply false
+    id 'io.github.chgor11.dexcfgobf' version '0.1.2' apply false
 }
 ```
 
 If versions are not managed in the root project, the module may instead use
-`id 'io.github.w296488320.dexcfgobf' version '0.1.2'`. Choose one version-management style; do not declare
+`id 'io.github.chgor11.dexcfgobf' version '0.1.2'`. Choose one version-management style; do not declare
 conflicting versions in both locations.
 If the root script does not already contain `plugins {}`, place the new block after any existing
 `buildscript {}` block and before other ordinary configuration blocks.
@@ -126,7 +126,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id 'com.android.application'
-    id 'io.github.w296488320.dexcfgobf'
+    id 'io.github.chgor11.dexcfgobf'
 }
 
 dexControlFlowObfuscator {
@@ -185,7 +185,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id 'com.android.library'
-    id 'io.github.w296488320.dexcfgobf'
+    id 'io.github.chgor11.dexcfgobf'
 }
 
 dexControlFlowObfuscator {
@@ -538,7 +538,7 @@ persistent `gh-pages` Maven repository and refuses to overwrite an existing vers
 
 ### 4.2 Gradle Plugin Portal and Maven Central (standard mirrors)
 
-Both channels use `io.github.w296488320.dexcfgobf`. Plugin Portal is resolved by
+Both channels use `io.github.chgor11.dexcfgobf`. Plugin Portal is resolved by
 `gradlePluginPortal()` and Central by `mavenCentral()`. Use GitHub Pages while initial reviews are
 pending; once a mirror is approved, module plugin declarations do not change. Consumers need no
 publisher account, GPG key, or publishing token.
@@ -624,7 +624,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id 'com.android.application'
-    id 'io.github.w296488320.dexcfgobf'
+    id 'io.github.chgor11.dexcfgobf'
 }
 
 dexControlFlowObfuscator {
@@ -676,7 +676,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id("com.android.application")
-    id("io.github.w296488320.dexcfgobf")
+    id("io.github.chgor11.dexcfgobf")
 }
 
 dexControlFlowObfuscator {
@@ -720,7 +720,7 @@ protecting a standalone AAR before publishing it. Applications using `0.1.1` or 
 ```groovy
 plugins {
     id 'com.android.library'
-    id 'io.github.w296488320.dexcfgobf'
+    id 'io.github.chgor11.dexcfgobf'
 }
 
 dexControlFlowObfuscator {
@@ -1255,7 +1255,7 @@ check that:
 
 - The Maven URL points to the extracted `maven-repo/`, not the ZIP or JAR.
 - `pluginManagement.repositories` is in `settings.gradle(.kts)`.
-- The marker directory contains `io.github.w296488320.dexcfgobf.gradle.plugin-<version>.pom`.
+- The marker directory contains `io.github.chgor11.dexcfgobf.gradle.plugin-<version>.pom`.
 - The requested version matches the version directory in the repository.
 
 ### 12.2 Missing release mapping
