@@ -12,16 +12,16 @@
   首版可能进入人工审核。
 - **Maven Central**：标准 Maven 镜像，需 namespace、PGP 与独立的 Portal 发布流程。
 
-三个渠道共享 canonical plugin ID `io.github.w296488320.dexcfgobf`，但发布状态互相独立。GitHub
+三个渠道共享 canonical plugin ID `io.github.chgor11.dexcfgobf`，但发布状态互相独立。GitHub
 Pages 上线不应伪装成 Portal/Central 已通过审核。
 
 项目的公开坐标是：
 
 ```text
-implementation: io.github.w296488320:dex-cfg-obfuscator:<version>
-plugin marker:  io.github.w296488320.dexcfgobf:
-                io.github.w296488320.dexcfgobf.gradle.plugin:<version>
-plugin id:      io.github.w296488320.dexcfgobf
+implementation: io.github.chgor11:dex-cfg-obfuscator:<version>
+plugin marker:  io.github.chgor11.dexcfgobf:
+                io.github.chgor11.dexcfgobf.gradle.plugin:<version>
+plugin id:      io.github.chgor11.dexcfgobf
 ```
 
 Java/Groovy 包名继续使用 `com.hunter.*`。Maven 坐标和 JVM 包名是两套独立标识，不需要为发布而搬迁源码。
@@ -30,7 +30,7 @@ Java/Groovy 包名继续使用 `com.hunter.*`。Maven 坐标和 JVM 包名是两
 
 1. 打开 <https://central.sonatype.com/>，建议直接使用 GitHub 账号 `w296488320` 登录。
 2. 接受发布者条款。
-3. 在 **Namespaces** 中确认 `io.github.w296488320` 已处于 `Verified` 状态。
+3. 在 **Namespaces** 中确认 `io.github.chgor11` 已处于 `Verified` 状态。
 
 Sonatype 通常会为 GitHub 登录用户自动验证 `io.github.<GitHub 用户名>`。如果没有自动创建，按照页面提供的
 verification key 建立临时公开仓库完成验证，或联系 Central Support。不要尝试发布旧的 `com.hunter` marker；
@@ -189,7 +189,7 @@ unset MAVEN_CENTRAL_USERNAME MAVEN_CENTRAL_PASSWORD \
 - **Gradle Plugin Portal** 是单独的插件目录和审核/发布系统。发布到 Maven Central 不会自动出现在 Plugin
   Portal；如需 `gradlePluginPortal()` 单独解析，还需要 Gradle 账号、Portal API key 和
   `com.gradle.plugin-publish` 发布流程。
-- 三边可以使用同一个 canonical plugin ID `io.github.w296488320.dexcfgobf`，但版本发布是三个独立动作。
+- 三边可以使用同一个 canonical plugin ID `io.github.chgor11.dexcfgobf`，但版本发布是三个独立动作。
 
 Plugin Portal 本地任务图和 metadata 可先检查：
 
