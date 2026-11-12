@@ -3,7 +3,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id 'com.android.application'
-    id 'io.github.w296488320.dexcfgobf'
+    id 'io.github.chgor11.dexcfgobf'
 }
 
 def protectionMode = providers.gradleProperty('sampleProtection')
