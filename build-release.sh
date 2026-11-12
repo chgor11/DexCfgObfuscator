@@ -124,9 +124,9 @@ run_local_gradle \
     publishAllPublicationsToLocalPluginRepoRepository
 
 implementation_dir="$staging_repo/io/github/w296488320/dex-cfg-obfuscator/$version"
-marker_dir="$staging_repo/io/github/w296488320/dexcfgobf/io.github.w296488320.dexcfgobf.gradle.plugin/$version"
+marker_dir="$staging_repo/io/github/w296488320/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin/$version"
 implementation_jar="$implementation_dir/dex-cfg-obfuscator-$version.jar"
-marker_pom="$marker_dir/io.github.w296488320.dexcfgobf.gradle.plugin-$version.pom"
+marker_pom="$marker_dir/io.github.chgor11.dexcfgobf.gradle.plugin-$version.pom"
 
 for required_artifact in "$implementation_jar" "$marker_pom"; do
     if [[ ! -s "$required_artifact" ]]; then
@@ -138,12 +138,12 @@ done
 echo "[3/4] 生成仅包含当前版本的可分发 ZIP"
 mkdir -p \
     "$package_root/maven-repo/io/github/w296488320/dex-cfg-obfuscator" \
-    "$package_root/maven-repo/io/github/w296488320/dexcfgobf/io.github.w296488320.dexcfgobf.gradle.plugin" \
+    "$package_root/maven-repo/io/github/w296488320/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin" \
     "$package_root/doc"
 cp -R -- "$implementation_dir" \
     "$package_root/maven-repo/io/github/w296488320/dex-cfg-obfuscator/"
 cp -R -- "$marker_dir" \
-    "$package_root/maven-repo/io/github/w296488320/dexcfgobf/io.github.w296488320.dexcfgobf.gradle.plugin/"
+    "$package_root/maven-repo/io/github/w296488320/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin/"
 cp -- "$script_dir/README.md" "$package_root/README.md"
 cp -- "$script_dir/doc/README_CN.md" "$package_root/doc/README_CN.md"
 cp -- "$script_dir/doc/README_EN.md" "$package_root/doc/README_EN.md"
@@ -162,7 +162,7 @@ jar --create --file "$temporary_archive" --date=2000-01-01T00:00:00Z -C "$packag
 archive_entries="$(jar --list --file "$temporary_archive")"
 for required_entry in \
     "maven-repo/io/github/w296488320/dex-cfg-obfuscator/$version/dex-cfg-obfuscator-$version.jar" \
-    "maven-repo/io/github/w296488320/dexcfgobf/io.github.w296488320.dexcfgobf.gradle.plugin/$version/io.github.w296488320.dexcfgobf.gradle.plugin-$version.pom" \
+    "maven-repo/io/github/w296488320/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin/$version/io.github.chgor11.dexcfgobf.gradle.plugin-$version.pom" \
     "README.md" \
     "doc/README_CN.md" \
     "doc/README_EN.md" \
