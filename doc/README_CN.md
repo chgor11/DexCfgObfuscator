@@ -70,7 +70,7 @@ pluginManagement {
     repositories {
         maven {
             name = 'DexCfgObfuscatorGitHubPages'
-            url = uri('https://w296488320.github.io/DexCfgObfuscator/maven-repo')
+            url = uri('https://chgor11.github.io/DexCfgObfuscator/maven-repo')
             content {
                 includeGroupByRegex 'io\\.github\\.w296488320(\\..*)?'
             }
@@ -481,7 +481,7 @@ outputs 执行常量池门禁。最终 DEX 的 CFG 防护和全局明文证明�
 
 正式 `v<version>` tag 会把实现组件和 Gradle plugin marker 合并到持久化的 `gh-pages` Maven
 仓库，并拒绝覆盖已经存在的版本。使用者只需在 `pluginManagement.repositories` 中增加
-`https://w296488320.github.io/DexCfgObfuscator/maven-repo`，无需 GitHub 账号或 Token。
+`https://chgor11.github.io/DexCfgObfuscator/maven-repo`，无需 GitHub 账号或 Token。
 
 ### 4.2 Gradle Plugin Portal 与 Maven Central（标准镜像）
 
@@ -523,7 +523,7 @@ pluginManagement {
     repositories {
         maven {
             name = 'DexCfgObfuscatorGitHubPages'
-            url = uri('https://w296488320.github.io/DexCfgObfuscator/maven-repo')
+            url = uri('https://chgor11.github.io/DexCfgObfuscator/maven-repo')
             content {
                 includeGroupByRegex 'io\\.github\\.w296488320(\\..*)?'
             }
@@ -544,7 +544,7 @@ pluginManagement {
     repositories {
         maven {
             name = "DexCfgObfuscatorGitHubPages"
-            url = uri("https://w296488320.github.io/DexCfgObfuscator/maven-repo")
+            url = uri("https://chgor11.github.io/DexCfgObfuscator/maven-repo")
             content {
                 includeGroupByRegex("io\\.github\\.w296488320(\\..*)?")
             }
