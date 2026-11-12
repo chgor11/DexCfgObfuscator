@@ -161,8 +161,8 @@ fi
 jar --create --file "$temporary_archive" --date=2000-01-01T00:00:00Z -C "$package_root" .
 archive_entries="$(jar --list --file "$temporary_archive")"
 for required_entry in \
-    "maven-repo/io/github/w296488320/dex-cfg-obfuscator/$version/dex-cfg-obfuscator-$version.jar" \
-    "maven-repo/io/github/w296488320/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin/$version/io.github.chgor11.dexcfgobf.gradle.plugin-$version.pom" \
+    "maven-repo/io/github/chgor11/dex-cfg-obfuscator/$version/dex-cfg-obfuscator-$version.jar" \
+    "maven-repo/io/github/chgor11/dexcfgobf/io.github.chgor11.dexcfgobf.gradle.plugin/$version/io.github.chgor11.dexcfgobf.gradle.plugin-$version.pom" \
     "README.md" \
     "doc/README_CN.md" \
     "doc/README_EN.md" \
