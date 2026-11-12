@@ -1,6 +1,6 @@
 pluginManagement {
     def publishedPluginRepository = providers.gradleProperty('samplePluginRepository').orNull
-    def publishedPluginVersion = providers.gradleProperty('samplePluginVersion').getOrElse('0.1.2')
+    def publishedPluginVersion = providers.gradleProperty('samplePluginVersion').getOrElse('1.0.10')
 
     // Source mode is the default for repository CI. Supplying samplePluginRepository switches the
     // same neutral application to an exact remote/local Maven repository and proves that both the
@@ -26,7 +26,7 @@ pluginManagement {
                     }
                 }
                 filter {
-                    includeGroupByRegex 'io\\.github\\.w296488320(\\..*)?'
+                    includeGroupByRegex 'io\\.github\\.chgor11(\\..*)?'
                 }
             }
         }
