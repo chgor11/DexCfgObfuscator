@@ -29,7 +29,7 @@ To verify the public GitHub Pages Maven repository rather than the included sour
 
 ```bash
 ./gradlew -p samples/android-consumer :app:assembleRelease \
-  -PsamplePluginRepository=https://w296488320.github.io/DexCfgObfuscator/maven-repo \
+  -PsamplePluginRepository=https://chgor11.github.io/DexCfgObfuscator/maven-repo \
   -PsamplePluginVersion=0.1.2 \
   -PsampleProtection=string \
   --no-configuration-cache
