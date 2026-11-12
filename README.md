@@ -64,7 +64,7 @@ JSON 报告。
 |---|---|
 | Plugin ID | `io.github.w296488320.dexcfgobf` |
 | Implementation group | `io.github.w296488320` |
-| Current version | `0.1.2` |
+| Current version | `1.0.1` |
 | Java baseline | Java 17 |
 | Development baseline | Gradle 9.6.1, AGP 9.3.1 |
 | Artifact type | Gradle plugin JAR distributed through a Maven repository |
@@ -114,7 +114,7 @@ Root project `build.gradle` / 项目根 `build.gradle`：
 plugins {
     // Keep existing Android/Kotlin declarations and add this line.
     // 保留已有 Android/Kotlin 插件声明，只增加这一行。
-    id 'io.github.w296488320.dexcfgobf' version '0.1.2' apply false
+    id 'io.github.chgor11.dexcfgobf' version '1.0.1' apply false
 }
 ```
 
@@ -126,7 +126,7 @@ import com.hunter.dexcfgobf.string.StringEncryptionMode
 
 plugins {
     id 'com.android.application'
-    id 'io.github.w296488320.dexcfgobf'
+    id 'io.github.chgor11.dexcfgobf'
 }
 
 dexControlFlowObfuscator {
